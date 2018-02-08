@@ -20,13 +20,16 @@
 <h6>Reviews</h6>
 <div *ngFor="let review of gem.reviews">
   <div class="row">
-    <div class="col-10">
+        <div class="col-8">   
+          <div class="col-2">
+            <img class="img-fluid" src="https://2.gravatar.com/avatar/blank" />
+          </div>
       <blockquote class="blockquote">
         <p class="mb-0">{{newReview.body}}</p>
         <footer class="blockquote-footer">
           <cite>{{newReview.author}}</cite>
-        </footer>
-      </blockquote>
+        </footer>        
+      </blockquote>      
     </div>
     <div class="col-2">
       <h1>{{newReview.rating}}</h1>
