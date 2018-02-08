@@ -1,0 +1,81 @@
+<!-- <h6>Reviews</h6>
+<div *ngFor="let review of gem.reviews">
+  <div class="row">
+    <div class="col-10">
+      <blockquote class="blockquote">
+        <p class="mb-0">{{newReview.body}}</p>
+        <footer class="blockquote-footer">
+          <cite>{{newReview.author}}</cite>
+        </footer>
+      </blockquote>
+    </div>
+    <div class="col-2">
+      <h1>{{newReview.rating}}</h1>
+    </div>
+  </div>
+</div> -->
+
+<h6>Write review</h6><br>
+<!-- update the reviews.. set "newReview" -->
+<h6>Reviews</h6>
+<div *ngFor="let review of gem.reviews">
+  <div class="row">
+    <div class="col-10">
+      <blockquote class="blockquote">
+        <p class="mb-0">{{newReview.body}}</p>
+        <footer class="blockquote-footer">
+          <cite>{{newReview.author}}</cite>
+        </footer>
+      </blockquote>
+    </div>
+    <div class="col-2">
+      <h1>{{newReview.rating}}</h1>
+    </div>
+  </div>
+</div>
+
+<form (ngSubmit)="submitcliked(); reviewForm.reset();" #reviewForm="ngForm">
+  <!-- <p>Form Valid: {{reviewForm.valid}}</p>
+  <p>Form Invalid: {{reviewForm.invalid}}</p>
+  <p>Form Dirty: {{reviewForm.dirty}}</p>
+  <p>Form Pristine: {{reviewForm.pristine}}</p>
+  <p>Form Touched: {{reviewForm.touched}}</p>
+  <p>Form Untouched: {{reviewForm.untouched}}</p> -->
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input [(ngModel)]="newReview.author" class="form-control" type="email" placeholder="Enter your email" name="email" required [class.is-invalid]="email.invalid && email.touched" #email=ngModel />
+        <div class="invalid-feedback">
+          Email is required.
+        </div>
+  </div>
+
+  <div class="form-group">
+   
+    <label for="body">Review</label>
+    <textarea [(ngModel)]="newReview.body" class="form-control" placeholder="Enter your review(400 characters)" name="body"   required [class.is-invalid]="body.invalid && body.touched" minlength="5" maxlength="400" #body="ngModel" ></textarea>
+    <!-- form Validations -->
+       <div class="invalid-feedback">
+         Must be at least 5 characters long.
+       </div>
+       
+     
+
+  </div>
+
+  <div class="form-group">
+    <label for="rating">Rating</label>
+    <select [(ngModel)]="newReview.rating" class="form-control" name="rating" required #rating=ngModel>
+      
+
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+
+  </div>
+  <input type="submit" class="btn btn-default" value="Submit Review"[disabled]="reviewForm.invalid" />
+</form>
+

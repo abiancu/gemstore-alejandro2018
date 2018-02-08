@@ -1,0 +1,22 @@
+
+
+<div class="card">
+   <!-- {{gem.id}} -->
+  <div class="card-header">{{gem.name}}</div>
+  <div class="container"><img src="{{gem.fullImagePath}}"></div>
+  {{gem.price | currency}}
+  
+  
+  <!-- {{gem.inventory}} -->
+  
+  <app-tabs [gem]="gem" ></app-tabs>
+  
+
+  
+  <div class="card">
+    Available: {{gem.inventory}}
+    <button *ngIf="gem.inventory > 0" class="btn btn-default" (click) = "addToCart()">Add to Cart</button>
+    <button *ngIf="gem.inventory <= 0" class="btn btn-danger" disabled>Sold Out</button>
+  </div>
+
+</div>
