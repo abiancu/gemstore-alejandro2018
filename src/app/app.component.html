@@ -1,8 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!--expressions --> 
 <app-navbar [cart]="cart" ></app-navbar>
-  <main class="container">
-   <div class="row">
+  <main class="container-fluid">
+    <a routerLink="/cart">Cart</a>
+    <a routerLink="/account">Account</a>
+    <router-outlet></router-outlet>
+   
+    <div class="row">
           <app-gem class="col-6"  [gem]="g" *ngFor="let g of gems" [cart]="cart"  ></app-gem>
           
   </div>

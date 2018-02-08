@@ -22,8 +22,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log(JSON.stringify(this.gems)); <--wrong way to get JSON
-    
+    //     
     //Angular way of requesting data 'Service'
     //bring in client service 
     // specify that "get" return <GemModel[]>
