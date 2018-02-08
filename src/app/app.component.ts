@@ -27,8 +27,9 @@ export class AppComponent implements OnInit {
     //Angular way of requesting data 'Service'
     //bring in client service 
     // specify that "get" return <GemModel[]>
-    this.httpClient.get<GemModel[]>('/assets/gems.json').subscribe(results => {this.gems=results});  // < -- get JSON third
-
+    this.httpClient.get<GemModel[]>('/assets/gems.json').subscribe(results => {this.gems=results});
+    // < -- get JSON third
+    // "subcribe" = observable, goes with higher order function
 
   }
 

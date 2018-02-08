@@ -46,7 +46,7 @@
     {
         "id": 3,
         "name": "Dodecahedron",
-        "price": 2.95,
+        "price": 3.00,
         "description": "Some gems have hidden qualities beyond their lustre, beyond their shine... Dodecahedron is one of those gems",
         "fullImagePath": "./assets/gem-03.gif",
         "inventory": 2,
