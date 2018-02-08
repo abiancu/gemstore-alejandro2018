@@ -22,7 +22,7 @@
   <div class="row">
         <div class="col-8">   
           <div class="col-2">
-            <img class="img-fluid" src="https://2.gravatar.com/avatar/blank" />
+            <img class="img-fluid" src="{{generateAvatarUrl(newReview.author)}}" />
           </div>
       <blockquote class="blockquote">
         <p class="mb-0">{{newReview.body}}</p>
@@ -37,7 +37,7 @@
   </div>
 </div>
 
-<form (ngSubmit)="submitcliked(); reviewForm.reset();" #reviewForm="ngForm">
+<form (ngSubmit)="submitClicked(); reviewForm.reset();" #reviewForm="ngForm">
   <!-- <p>Form Valid: {{reviewForm.valid}}</p>
   <p>Form Invalid: {{reviewForm.invalid}}</p>
   <p>Form Dirty: {{reviewForm.dirty}}</p>
