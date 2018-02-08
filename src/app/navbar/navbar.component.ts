@@ -20,10 +20,10 @@ export class NavbarComponent implements OnInit {
   }, {
     text: 'Account',
     href: '/account'
-  }, {
-    text: 'Cart',
-    href: '/cart'
-  }];
+  } 
+    // text: 'Cart',
+    // href: '/cart'
+  ];
 
   constructor() { }
 
