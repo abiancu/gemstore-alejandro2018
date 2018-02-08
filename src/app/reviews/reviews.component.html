@@ -43,7 +43,7 @@
   <p>Form Untouched: {{reviewForm.untouched}}</p> -->
   <div class="form-group">
     <label for="email">Email</label>
-    <input [(ngModel)]="newReview.author" class="form-control" type="email" placeholder="Enter your email" name="email" required [class.is-invalid]="email.invalid && email.touched" #email=ngModel />
+    <input [(ngModel)]="newReview.author" class="form-control" type="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Enter your email" name="email" required [class.is-invalid]="email.invalid && email.touched" #email=ngModel />
         <div class="invalid-feedback">
           Email is required.
         </div>
